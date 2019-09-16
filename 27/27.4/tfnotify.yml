@@ -1,0 +1,22 @@
+ci: codebuild
+notifier:
+  github:
+    token: $GITHUB_TOKEN
+    repository:
+      owner: "your-github-name"
+      name: "your-repository"
+terraform:
+  plan:
+    template: |
+      {{ .Title }}
+      {{ .Message }}
+      {{if .Result}}<pre><code> {{ .Result }} </pre></code>{{end}}
+      <details><summary>Details (Click me)</summary>
+      <pre><code> {{ .Body }} </pre></code></details>
+  apply:
+    template: |
+      {{ .Title }}
+      {{ .Message }}
+      {{if .Result}}<pre><code> {{ .Result }} </pre></code>{{end}}
+      <details><summary>Details (Click me)</summary>
+      <pre><code> {{ .Body }} </pre></code></details>
