@@ -1,0 +1,3 @@
+module "before" {
+  source = "./rename"
+}

@@ -1,0 +1,3 @@
+module "after" {
+  source = "./rename"
+}
