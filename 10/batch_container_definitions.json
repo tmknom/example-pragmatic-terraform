@@ -1,0 +1,16 @@
+[
+  {
+    "name": "alpine",
+    "image": "alpine:latest",
+    "essential": true,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "batch",
+        "awslogs-group": "/ecs-scheduled-tasks/example"
+      }
+    },
+    "command" : ["/bin/date"]
+  }
+]
