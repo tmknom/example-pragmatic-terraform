@@ -1,0 +1,7 @@
+- name: example
+  image: nginx:latest
+  essential: true
+  # この設定に関する驚くべき挙動を発見したが、それを書くには余白が狭すぎる
+  portMappings:
+    - protocol: tcp
+      containerPort: 80
