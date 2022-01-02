@@ -1,3 +1,5 @@
+variable "github_token" {}
+
 resource "aws_codepipeline" "example" {
   name     = "example"
   role_arn = module.codepipeline_role.iam_role_arn
@@ -18,6 +20,7 @@ resource "aws_codepipeline" "example" {
         Repo                 = "your-repository"
         Branch               = "master"
         PollForSourceChanges = false
+        OAuthToken           = var.github_token
       }
     }
   }
