@@ -1,3 +1,6 @@
+# Exclude all internal files
+*internal*.tf
+
 # Local .terraform directories
 **/.terraform/*
 
